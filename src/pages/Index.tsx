@@ -1,8 +1,10 @@
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProductCard from "@/components/ProductCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
+import { mockUserData } from "@/data/mockUser";
+import { useToast } from "@/components/ui/use-toast";
 
 const products = [
   {
@@ -71,6 +73,24 @@ const testimonials = [
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleLogin = () => {
+    setIsLoading(true);
+    // Simulate API call
+    setTimeout(() => {
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userData", JSON.stringify(mockUserData));
+      toast({
+        title: "Welcome back!",
+        description: `Logged in as ${mockUserData.name}`,
+      });
+      setIsLoading(false);
+      navigate("/profile");
+    }, 1000);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -88,12 +108,23 @@ const Index = () => {
               Discover our carefully curated selection of migraine relief products,
               backed by medical expertise and proven results.
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90"
-            >
-              Explore Products
-            </Button>
+            <div className="flex justify-center gap-4">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90"
+              >
+                Explore Products
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/10 text-white hover:bg-white/20"
+                onClick={handleLogin}
+                disabled={isLoading}
+              >
+                {isLoading ? "Logging in..." : "Login"}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
