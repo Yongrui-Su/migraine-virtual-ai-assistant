@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -56,7 +55,7 @@ const products = [
     title: "Light Sensitivity Relief Drops",
     price: "$27.99",
     description: "Eye drops specifically formulated for photophobia during migraines.",
-    image: "https://images.unsplash.com/photo-1571707696525-c4484d79e39c?fit=crop&w=800&h=800",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=800&h=800",
     longDescription: "Our Light Sensitivity Relief Drops are specially formulated to provide relief from photophobia during migraine episodes. These soothing eye drops contain natural ingredients that help reduce light sensitivity and eye strain, making it easier to function during a migraine attack.",
   }
 ];
