@@ -1,7 +1,9 @@
 
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
+  id: number;
   title: string;
   price: string;
   description: string;
@@ -9,10 +11,10 @@ interface ProductCardProps {
   className?: string;
 }
 
-const ProductCard = ({ title, price, description, image, className }: ProductCardProps) => {
+const ProductCard = ({ id, title, price, description, image, className }: ProductCardProps) => {
   return (
-    <div className={cn(
-      "group relative overflow-hidden rounded-lg bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl",
+    <Link to={`/product/${id}`} className={cn(
+      "group relative block overflow-hidden rounded-lg bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl",
       "animate-fadeIn opacity-0",
       className
     )}>
@@ -29,7 +31,7 @@ const ProductCard = ({ title, price, description, image, className }: ProductCar
         <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
         <p className="text-lg font-bold text-primary">{price}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
