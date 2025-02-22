@@ -1,11 +1,9 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "@/components/ProductCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
-import { mockUserData } from "@/data/mockUser";
-import { useToast } from "@/components/ui/use-toast";
+import Header from "@/components/Header";
 import {
   Dialog,
   DialogContent,
@@ -79,29 +77,14 @@ const testimonials = [
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  const { toast } = useToast();
-
-  const handleLogin = () => {
-    setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("userData", JSON.stringify(mockUserData));
-      toast({
-        title: "Welcome back!",
-        description: `Logged in as ${mockUserData.name}`,
-      });
-      setIsLoading(false);
-      navigate("/profile");
-    }, 1000);
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-primary py-20 md:py-32">
+      <section className="relative overflow-hidden bg-primary pt-32 pb-20 md:py-32">
         <div className="container relative z-10 mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <span className="mb-2 inline-block rounded-full bg-white/10 px-4 py-1 text-sm text-white backdrop-blur-sm">
@@ -120,15 +103,6 @@ const Index = () => {
                 className="bg-white text-primary hover:bg-white/90"
               >
                 Explore Products
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 text-white hover:bg-white/20"
-                onClick={handleLogin}
-                disabled={isLoading}
-              >
-                {isLoading ? "Logging in..." : "Login"}
               </Button>
             </div>
           </div>
@@ -296,4 +270,3 @@ const Index = () => {
 };
 
 export default Index;
-
