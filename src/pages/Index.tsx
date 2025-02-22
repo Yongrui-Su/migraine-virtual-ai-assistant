@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -26,6 +25,34 @@ const products = [
     description: "Expert-curated guide for migraine pressure point therapy.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=800&h=800",
   },
+  {
+    id: 4,
+    title: "Rapid Relief Migraine Tablets",
+    price: "$29.99",
+    description: "Fast-acting tablets for acute migraine relief with minimal side effects.",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?fit=crop&w=800&h=800",
+  },
+  {
+    id: 5,
+    title: "Anti-Nausea Migraine Solution",
+    price: "$34.99",
+    description: "Specialized medication targeting migraine-related nausea and dizziness.",
+    image: "https://images.unsplash.com/photo-1576602976047-174e57a47881?fit=crop&w=800&h=800",
+  },
+  {
+    id: 6,
+    title: "Preventive Migraine Capsules",
+    price: "$39.99",
+    description: "Daily supplement to reduce migraine frequency and intensity.",
+    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?fit=crop&w=800&h=800",
+  },
+  {
+    id: 7,
+    title: "Light Sensitivity Relief Drops",
+    price: "$27.99",
+    description: "Eye drops specifically formulated for photophobia during migraines.",
+    image: "https://images.unsplash.com/photo-1571707696525-c4484d79e39c?fit=crop&w=800&h=800",
+  }
 ];
 
 const testimonials = [

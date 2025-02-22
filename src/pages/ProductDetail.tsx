@@ -27,6 +27,38 @@ const products = [
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=800&h=800",
     longDescription: "Our Digital Pressure Point Guide is a comprehensive resource that teaches you effective self-administered pressure point therapy techniques for migraine relief. Created by medical experts, this guide includes detailed instructions, video demonstrations, and anatomical diagrams to help you master these proven relief methods.",
   },
+  {
+    id: 4,
+    title: "Rapid Relief Migraine Tablets",
+    price: "$29.99",
+    description: "Fast-acting tablets for acute migraine relief with minimal side effects.",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?fit=crop&w=800&h=800",
+    longDescription: "Our Rapid Relief Migraine Tablets are specifically formulated to provide quick relief from acute migraine attacks. These tablets contain a carefully balanced combination of active ingredients that target multiple migraine symptoms while minimizing potential side effects. The fast-dissolving formula ensures rapid absorption for immediate relief when you need it most.",
+  },
+  {
+    id: 5,
+    title: "Anti-Nausea Migraine Solution",
+    price: "$34.99",
+    description: "Specialized medication targeting migraine-related nausea and dizziness.",
+    image: "https://images.unsplash.com/photo-1576602976047-174e57a47881?fit=crop&w=800&h=800",
+    longDescription: "Our Anti-Nausea Migraine Solution is specifically designed to address the often-overlooked symptoms of migraine-related nausea and dizziness. This unique formula combines anti-nausea medication with gentle migraine relief compounds to provide comprehensive comfort during migraine episodes.",
+  },
+  {
+    id: 6,
+    title: "Preventive Migraine Capsules",
+    price: "$39.99",
+    description: "Daily supplement to reduce migraine frequency and intensity.",
+    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?fit=crop&w=800&h=800",
+    longDescription: "Our Preventive Migraine Capsules are formulated for daily use to help reduce the frequency and intensity of migraine attacks. These capsules contain a blend of clinically-proven ingredients including magnesium, riboflavin, and CoQ10, which work together to help prevent migraines before they start.",
+  },
+  {
+    id: 7,
+    title: "Light Sensitivity Relief Drops",
+    price: "$27.99",
+    description: "Eye drops specifically formulated for photophobia during migraines.",
+    image: "https://images.unsplash.com/photo-1571707696525-c4484d79e39c?fit=crop&w=800&h=800",
+    longDescription: "Our Light Sensitivity Relief Drops are specially formulated to provide relief from photophobia during migraine episodes. These soothing eye drops contain natural ingredients that help reduce light sensitivity and eye strain, making it easier to function during a migraine attack.",
+  }
 ];
 
 const ProductDetail = () => {
