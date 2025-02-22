@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -188,12 +189,21 @@ const Index = () => {
               Our team of medical professionals is here to help you find the right
               solution for your migraine needs.
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90"
-            >
-              Contact Us
-            </Button>
+            <div className="flex justify-center gap-4">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90"
+              >
+                Contact Us
+              </Button>
+              <Button
+                size="lg"
+                className="bg-[#25D366] text-white hover:bg-[#25D366]/90"
+                onClick={() => window.open('https://wa.me/1555054750', '_blank')}
+              >
+                Chat on WhatsApp
+              </Button>
+            </div>
           </div>
         </div>
       </section>
