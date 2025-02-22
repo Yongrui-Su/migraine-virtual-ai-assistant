@@ -41,24 +41,24 @@ const products = [
   },
   {
     id: 5,
-    title: "Anti-Nausea Migraine Solution",
+    title: "Gut-Brain Support",
     price: "$34.99",
     description: "Specialized medication targeting migraine-related nausea and dizziness.",
-    image: "https://images.unsplash.com/photo-1576602976047-174e57a47881?fit=crop&w=800&h=800",
+    image: "https://migrawell.com/_next/image?url=https%3A%2F%2Fcdn.durable.co%2Fblocks%2FeIx8f3m84ImfSFWvpdGQGZbwGvtyoKlNOGE55bFK1JwKT99Ww6JNqh9HA9zbmIJf.png&w=1920&q=90",
   },
   {
     id: 6,
-    title: "Preventive Migraine Capsules",
+    title: "Nutrient rich sleep aid",
     price: "$39.99",
     description: "Daily supplement to reduce migraine frequency and intensity.",
-    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?fit=crop&w=800&h=800",
+    image: "https://migrawell.com/_next/image?url=https%3A%2F%2Fcdn.durable.co%2Fblocks%2F1zZimkawsN7ar9H4CSGZLKicwc2XOF8rWoDSGTXLZ8XxMwad3ADCOPO1heh1aKD7.png&w=1920&q=90",
   },
   {
     id: 7,
-    title: "Light Sensitivity Relief Drops",
+    title: "Methylated Multivitamin",
     price: "$27.99",
-    description: "Eye drops specifically formulated for photophobia during migraines.",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?fit=crop&w=800&h=800",
+    description: "Premium methylated multivitamin with bioavailable nutrients to support brain health and energy levels.",
+    image: "https://migrawell.com/_next/image?url=https%3A%2F%2Fcdn.durable.co%2Fblocks%2F39pku3TlglU9JETxfaABI1HviFwrgoQpIamraJOC6dGeNsyUiYEllLcm9vtRS92a.png&w=1920&q=90",
   }
 ];
 
@@ -97,14 +97,6 @@ const Index = () => {
               Discover our carefully curated selection of migraine relief products,
               backed by medical expertise and proven results.
             </p>
-            <div className="flex justify-center gap-4">
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90"
-              >
-                Explore Products
-              </Button>
-            </div>
           </div>
         </div>
       </section>
