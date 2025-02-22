@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,7 +8,6 @@ import NotFound from "./pages/NotFound";
 import ProductDetail from "./pages/ProductDetail";
 import BookAppointment from "./pages/BookAppointment";
 import Profile from "./pages/Profile";
-import Privacy from "./pages/Privacy";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 const queryClient = new QueryClient();
@@ -30,9 +28,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
 const App = () => (
   <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Helmet>
+
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+    <Helmet>
           <script
             src="https://www.chat-data.com/embed.min.js?chatbotId=67ba1d0df986e3dc071a4cd5"
             async
@@ -47,13 +46,13 @@ const App = () => (
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/book-appointment" element={<BookAppointment />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
   </HelmetProvider>
+
 );
 
 export default App;
