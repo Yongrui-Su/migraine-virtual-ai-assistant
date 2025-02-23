@@ -14,7 +14,7 @@ interface MedicalRecord {
 interface UserData {
   name: string;
   email: string;
-  medicalHistory: MedicalRecord[];
+  purchaseHistory: MedicalRecord[];
 }
 
 const Profile = () => {
@@ -42,7 +42,7 @@ const Profile = () => {
       title: "Logged out successfully",
       description: "You have been logged out of your account",
     });
-    navigate("/login");
+    navigate("/");
   };
 
   if (!userData) return null;
@@ -67,9 +67,9 @@ const Profile = () => {
           </Card>
 
           <Card className="p-6">
-            <h2 className="mb-4 text-xl font-semibold">Medical History</h2>
+            <h2 className="mb-4 text-xl font-semibold">Purchase History</h2>
             <div className="space-y-4">
-              {userData.medicalHistory.map((record, index) => (
+              {userData.purchaseHistory.map((record, index) => (
                 <div
                   key={index}
                   className="rounded-lg border border-gray-200 p-4"

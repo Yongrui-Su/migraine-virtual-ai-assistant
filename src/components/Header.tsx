@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -42,6 +41,23 @@ const Header = () => {
         title: "Welcome back!",
         description: `Logged in as ${mockUserData.name}`,
       });
+      const iframes = document.querySelectorAll(`iframe[src^="https://www.chat-data.com/chatbot-iframe/"]`);
+      if (iframes.length > 0) {
+          iframes.forEach(iframe => {
+              (iframe as HTMLIFrameElement).contentWindow.postMessage({
+                  event: 'user-info',
+                  user: {
+                      name: mockUserData.name,
+                      email: mockUserData.email,
+                      info: mockUserData.purchaseHistory.map(item => 
+                        `Product: ${item.product} (Purchased: ${item.purchase_date}, Notes: ${item.notes})`
+                    ).join('\n')
+                  }
+              }, '*');
+          });
+      } else {
+          console.error('No iframes found');
+      }
       setIsLoading(false);
     }, 1000);
   };

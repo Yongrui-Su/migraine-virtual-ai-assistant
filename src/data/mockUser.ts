@@ -2,20 +2,23 @@
 export const mockUserData = {
   name: "Sarah Thompson",
   email: "sarah.thompson@example.com",
-  medicalHistory: [
+  purchaseHistory: [
     {
-      date: "2024-02-15",
-      condition: "Chronic Migraine",
+      purchase_date: "2024-02-15",
+      product: "Methylated Multivitamin",
+      quantity: 1,
       notes: "Frequent episodes, 3-4 times per week",
     },
     {
-      date: "2024-01-20",
-      condition: "Prescribed Medication",
+      purchase_date: "2024-01-20",
+      product: "Premium Migraine Relief Pack",
+      quantity: 1,
       notes: "Started preventive treatment",
     },
     {
-      date: "2023-12-10",
-      condition: "Migraine with Aura",
+      purchase_date: "2023-12-10",
+      product: "Therapeutic Headache Balm",
+      quantity: 1,
       notes: "Visual disturbances preceding headache",
     },
   ],
